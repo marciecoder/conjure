@@ -1,0 +1,11 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: conjure
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${CONFIG_URI:https://github.com/marciecoder/configs}
+          searchPaths: configs
