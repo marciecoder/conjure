@@ -1,5 +1,11 @@
 server:
-  port: 8200
+  port: ${SERVER_PORT:8200}
+eureka:
+  client:
+    register-with-eureka: ${EUREKA_CLIENT_REGISTER:true}
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761/eureka/}
 spring:
   application:
     name: conjure
